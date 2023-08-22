@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { data } from '../utils/Data';
 
 import BarChart from '../components/BarChart';
+import LineChart from '../components/LineChart';
 import PieChart from '../components/PieChart';
 
 Chart.register(CategoryScale);
@@ -32,6 +33,7 @@ export default function Test() {
 		<>
 			<h1 className="text-3xl font-bold text-center">Test Page</h1>
 			<BarChart chartData={chartData} />
+			<LineChart chartData={chartData} />
 			<PieChart chartData={chartData} />
 		</>
 	);
