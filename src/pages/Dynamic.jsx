@@ -10,27 +10,48 @@ const initialValues = [
 ];
 
 export default function Dynamic() {
-	const [chartData /*, setChartData*/] = useState({
+	const [chartData, setChartData] = useState({
 		labels: initialValues.map((item, index) => index + 1),
 		datasets: [
 			{
-				lineTension: 0.25,
+				lineTension: 0.2,
 				data: initialValues.map((item) => item.value),
 				borderWidth: 3,
 			},
 		],
 	});
 
-	// TODO: Remove data from front of chartData
-	//function popChartData() {}
+	// BUG: shiftChartData amd pushChartData will fire
+	// twice instead of once for some GD reason
+	function shiftChartData() {
+		if (chartData.labels.length > 0) {
+			setChartData((prev) => {
+				prev.datasets[0].data.shift();
+				prev.labels.shift();
+				return { ...prev };
+			});
+		}
+	}
 
-	// TODO: Add random data to the end of chartData
-	//function pushChartData() {}
+	function pushChartData() {
+		setChartData((prev) => {
+			const randomValue = Math.floor(Math.random() * 10) + 1;
+			prev.datasets[0].data.push(randomValue);
+			prev.labels.push(prev.labels.length + 1);
+			return { ...prev };
+		});
+	}
 
 	return (
 		<>
 			<h1 className="text-3xl font-bold text-center">Dynamic Line Chart</h1>
 			<LineChart chartData={chartData} h2Title={'Rando Dato'} />
+			<button onClick={pushChartData} className="p-1 border">
+				Add
+			</button>
+			<button onClick={shiftChartData} className="p-1 border">
+				Remove
+			</button>
 		</>
 	);
 }
