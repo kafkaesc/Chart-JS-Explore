@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import About from './pages/About';
 import App from './App';
+import Dynamic from './pages/Dynamic';
 import Error from './Error';
 import Home from './pages/Home';
 import Test from './pages/Test';
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
 		children: [
 			{ path: '/', element: <Home /> },
 			{ path: '/About', element: <About /> },
+			{ path: '/Dynamic', element: <Dynamic /> },
 			{ path: '/Home', element: <Home /> },
 			{ path: '/Test', element: <Test /> },
 		],
