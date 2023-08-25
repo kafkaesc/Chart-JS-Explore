@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from '../elements/Button';
 import LineChart from '../components/LineChart';
 
 const initialValues = [
@@ -21,7 +22,7 @@ export default function Dynamic() {
 		],
 	});
 
-	// BUG: shiftChartData amd pushChartData will fire
+	// BUG: shiftChartData and pushChartData will fire
 	// twice instead of once for some GD reason
 	function shiftChartData() {
 		if (chartData.labels.length > 0) {
@@ -46,12 +47,8 @@ export default function Dynamic() {
 		<>
 			<h1 className="text-3xl font-bold text-center">Dynamic Line Chart</h1>
 			<LineChart chartData={chartData} h2Title={'Rando Dato'} />
-			<button onClick={pushChartData} className="p-1 border">
-				Add
-			</button>
-			<button onClick={shiftChartData} className="p-1 border">
-				Remove
-			</button>
+			<Button onClick={pushChartData}>Add</Button>
+			<Button onClick={shiftChartData}>Remove</Button>
 		</>
 	);
 }
