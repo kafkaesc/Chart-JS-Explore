@@ -32,9 +32,9 @@ export default function Test() {
 	return (
 		<>
 			<h1 className="text-3xl font-bold text-center">Test Page</h1>
-			<BarChart chartData={chartData} />
-			<LineChart chartData={chartData} />
-			<PieChart chartData={chartData} />
+			<BarChart chartData={chartData} chartTitle={'Bar Chart'} />
+			<LineChart chartData={chartData} chartTitle={'Line Chart'} />
+			<PieChart chartData={chartData} chartTitle={'Pie Chart'} />
 		</>
 	);
 }
