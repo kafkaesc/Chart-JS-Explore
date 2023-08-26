@@ -13,6 +13,7 @@ export default function LineChart({ chartData, chartTitle, h2Title }) {
 						title: { display: true, text: chartTitle ? chartTitle : '' },
 					},
 				}}
+				redraw={true}
 			/>
 		</div>
 	);
