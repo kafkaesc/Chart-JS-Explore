@@ -22,25 +22,26 @@ export default function Dynamic() {
 		],
 	});
 
-	// BUG: shiftChartData and pushChartData will fire
-	// twice instead of once for some GD reason
 	function shiftChartData() {
 		if (chartData.labels.length > 0) {
-			setChartData((prev) => {
-				prev.datasets[0].data.shift();
-				prev.labels.shift();
-				return { ...prev };
-			});
+			const newChartData = { ...chartData };
+			newChartData.datasets[0].data.shift();
+			newChartData.labels.shift();
+			setChartData(newChartData);
 		}
 	}
 
 	function pushChartData() {
-		setChartData((prev) => {
-			const randomValue = Math.floor(Math.random() * 10) + 1;
-			prev.datasets[0].data.push(randomValue);
-			prev.labels.push(prev.labels.length + 1);
-			return { ...prev };
+		const newChartData = { ...chartData };
+		newChartData.datasets[0].data = [
+			...newChartData.datasets[0].data,
+			Math.floor(Math.random() * 10) + 1,
+		];
+		newChartData.labels = [];
+		newChartData.datasets[0].data.forEach((datum, index) => {
+			newChartData.labels.push(index + 1);
 		});
+		setChartData(newChartData);
 	}
 
 	return (
