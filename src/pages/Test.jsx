@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import Chart from 'chart.js/auto';
 import { CategoryScale } from 'chart.js';
-import { useState } from 'react';
-import { data } from '../utils/Data';
 
+import H1 from '../elements/H1';
 import BarChart from '../components/BarChart';
 import LineChart from '../components/LineChart';
+import Navigation from '../components/Navigation';
 import PieChart from '../components/PieChart';
+
+import { data } from '../utils/Data';
 
 Chart.register(CategoryScale);
 
@@ -31,7 +34,8 @@ export default function Test() {
 
 	return (
 		<>
-			<h1 className="text-3xl font-bold text-center">Test Page</h1>
+			<Navigation />
+			<H1 className="text-3xl font-bold text-center">Test Page</H1>
 			<BarChart chartData={chartData} chartTitle={'Bar Chart'} />
 			<LineChart chartData={chartData} chartTitle={'Line Chart'} />
 			<PieChart chartData={chartData} chartTitle={'Pie Chart'} />
