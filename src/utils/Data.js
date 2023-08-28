@@ -30,3 +30,13 @@ export const data = [
 		userLost: 234,
 	},
 ];
+
+export const jenny = [
+	{ id: 1, value: 8 },
+	{ id: 2, value: 6 },
+	{ id: 3, value: 7 },
+	{ id: 4, value: 5 },
+	{ id: 5, value: 3 },
+	{ id: 6, value: 0 },
+	{ id: 7, value: 9 },
+];
