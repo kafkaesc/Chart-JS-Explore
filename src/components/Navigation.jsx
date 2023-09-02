@@ -11,7 +11,11 @@ export default function Navigation() {
 	return (
 		<ul className="w-full text-center bg-gray-200">
 			{pages.map((page) => {
-				return <NavigationItem to={page.path}>{page.text}</NavigationItem>;
+				return (
+					<NavigationItem key={`nav-${page.text.toLowerCase()}`} to={page.path}>
+						{page.text}
+					</NavigationItem>
+				);
 			})}
 		</ul>
 	);
