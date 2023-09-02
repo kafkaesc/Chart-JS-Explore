@@ -4,6 +4,7 @@ const pages = [
 	{ path: '/Home', text: 'Home' },
 	{ path: '/About', text: 'About' },
 	{ path: '/Dynamic', text: 'Dynamic' },
+	{ path: '/Flex', text: 'Flex' },
 	{ path: '/Test', text: 'Test' },
 ];
 
