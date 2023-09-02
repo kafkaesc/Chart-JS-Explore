@@ -1,8 +1,6 @@
 .fbg-bar {
 	color: #fff;
 	flex: grow;
-	padding-left: 5px;
-	padding-right: 5px;
 }
 
 .fbg-bar-bg-0 {
@@ -19,6 +17,14 @@
 
 .fbg-bar-bg-3 {
 	background-color: #415a77;
+}
+
+.fbg-bar-bg-4 {
+	background-color: #7209b7;
+}
+
+.fbg-default-tail {
+	flex: 0 0 4.25em;
 }
 
 .fbg-row {
