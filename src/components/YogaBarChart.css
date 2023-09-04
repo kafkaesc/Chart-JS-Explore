@@ -1,0 +1,37 @@
+.yoga-bar-chart {
+	display: block;
+}
+
+.ybc-bar {
+	color: #fff;
+	flex: grow;
+}
+
+.ybc-bar-bg-0 {
+	background-color: #ef476f;
+}
+
+.ybc-bar-bg-1 {
+	background-color: #06d6a0;
+}
+
+.ybc-bar-bg-2 {
+	background-color: #e85d04;
+}
+
+.ybc-bar-bg-3 {
+	background-color: #415a77;
+}
+
+.ybc-bar-bg-4 {
+	background-color: #7209b7;
+}
+
+.ybc-default-tail {
+	flex: 0 0 4.25em;
+}
+
+.ybc-row {
+	display: flex;
+	margin-bottom: 2px;
+}
