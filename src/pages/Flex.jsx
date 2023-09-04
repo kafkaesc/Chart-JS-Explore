@@ -1,51 +1,23 @@
 import H1 from '../elements/H1';
 import Navigation from '../components/Navigation';
+import YogaBarChart from '../components/YogaBarChart';
 import './Flex.css';
 
-const tickWidth = 25;
+const chartData = [
+	{ label: '#1', tailLabel: '(46.3%)', value: 46.3 },
+	{ label: '#2', tailLabel: '(25.0%)', value: 25 },
+	{ label: '#3', tailLabel: '(16.0%)', value: 16 },
+	{ label: '#4', tailLabel: '(12.7%)', value: 12.7 },
+	{ label: '#5', tailLabel: '(100.0%)', value: 100 },
+];
 
 export default function Flex() {
-	// Don't judge me for all these in-line styles,
-	// I am outlining some CSS classes.
 	return (
 		<>
 			<Navigation />
 			<H1 className="text-3xl font-bold text-center">Flex Graph</H1>
-			<div className="flex-graph-page">
-				<div className="fbg-row">
-					<div style={{ flex: '0 0 ' + tickWidth + 'px' }}>#1</div>
-					<div
-						className="fbg-bar fbg-bar-bg-0"
-						style={{ width: '46.3%' }}
-					></div>
-					<div className="fbg-default-tail">(46.3%)</div>
-				</div>
-				<div className="fbg-row">
-					<div style={{ flex: '0 0 ' + tickWidth + 'px' }}>#2</div>
-					<div className="fbg-bar fbg-bar-bg-1" style={{ width: '25%' }}></div>
-					<div className="fbg-default-tail">(25.0%)</div>
-				</div>
-				<div className="fbg-row">
-					<div style={{ flex: '0 0 ' + tickWidth + 'px' }}>#3</div>
-					<div className="fbg-bar fbg-bar-bg-2" style={{ width: '16%' }}></div>
-					<div className="fbg-default-tail">(16.0%)</div>
-				</div>
-				<div className="fbg-row">
-					<div style={{ flex: '0 0 ' + tickWidth + 'px' }}>#4</div>
-					<div
-						className="fbg-bar fbg-bar-bg-3"
-						style={{ width: '12.7%' }}
-					></div>
-					<div className="fbg-default-tail">(12.7%)</div>
-				</div>
-				<div className="fbg-row">
-					<div style={{ flex: '0 0 ' + tickWidth + 'px' }}>#5</div>
-					<div
-						className="fbg-bar fbg-bar-bg-4"
-						style={{ width: '100.0%' }}
-					></div>
-					<div className="fbg-default-tail">(100.0%)</div>
-				</div>
+			<div className="max-w-2xl mx-auto">
+				<YogaBarChart chartData={chartData} />
 			</div>
 		</>
 	);
