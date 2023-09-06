@@ -2,6 +2,10 @@
 	display: block;
 }
 
+.yoga-bar-chart-col {
+	display: block;
+}
+
 .ybc-bar {
 	color: #fff;
 	flex: grow;
@@ -25,6 +29,10 @@
 
 .ybc-bar-bg-4 {
 	background-color: #7209b7;
+}
+
+.ybc-col {
+	display: inline-block;
 }
 
 .ybc-default-tail {

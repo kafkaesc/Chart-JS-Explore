@@ -28,10 +28,7 @@ export default function YogaBarChart({ chartData, ...props }) {
 			<div className="yoga-bar-chart">
 				{chartData.map((datum, index) => {
 					return (
-						<div
-							className="ybc-row ybc-row-rtl"
-							key={`ybc-row-${datum.label}`}
-						>
+						<div className="ybc-row ybc-row-rtl" key={`ybc-row-${datum.label}`}>
 							<div style={{ flex: '0 0 ' + tickWidth + 'px' }}>
 								{datum.label}
 							</div>
@@ -39,7 +36,26 @@ export default function YogaBarChart({ chartData, ...props }) {
 								className={`ybc-bar ybc-bar-bg-${index}`}
 								style={{ width: datum.value + '%' }}
 							></div>
-							<div className="ybc-default-tail">{datum.tailLabel}</div>
+							{datum.tailLabel && (
+								<div className="ybc-default-tail">{datum.tailLabel}</div>
+							)}
+						</div>
+					);
+				})}
+			</div>
+		);
+	} else if (props.direction === 'up') {
+		ybcJsx = (
+			<div className="yoga-bar-chart-col">
+				{chartData.map((datum, index) => {
+					return (
+						<div className="ybc-col" key={`ybc-col-${datum.label}`}>
+							{datum.tailLabel && <div>{datum.tailLabel}</div>}
+							<div
+								className={`ybc-bar ybc-bar-bg-${index}`}
+								style={{ height: (datum.value / 100) * 50 + 'px' }}
+							></div>
+							<div>{datum.label}</div>
 						</div>
 					);
 				})}
