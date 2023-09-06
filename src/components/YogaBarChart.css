@@ -35,3 +35,7 @@
 	display: flex;
 	margin-bottom: 2px;
 }
+
+.ybc-row-rtl {
+	direction: rtl;
+}
