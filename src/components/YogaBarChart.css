@@ -4,6 +4,7 @@
 
 .yoga-bar-chart-col {
 	display: block;
+	text-align: center;
 }
 
 .ybc-bar {
@@ -33,6 +34,7 @@
 
 .ybc-col {
 	display: inline-block;
+	min-width: 4em;
 }
 
 .ybc-default-tail {

@@ -18,6 +18,7 @@ export default function Flex() {
 			<H1 className="text-3xl font-bold text-center">Flex Graph</H1>
 			<div className="max-w-2xl mx-auto">
 				<YogaBarChart chartData={chartData} />
+				{/*<YogaBarChart chartData={chartData} direction="up" />*/}
 			</div>
 		</>
 	);
