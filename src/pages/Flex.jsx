@@ -35,7 +35,7 @@ export default function Flex() {
 				</div>
 				<div className="py-2 mb-4 border">
 					<H2>Upward</H2>
-					<YogaBarChart chartData={chartData} direction="up" />
+					<YogaBarChart barHeight="250" chartData={chartData} direction="up" />
 				</div>
 			</div>
 		</>
