@@ -4,7 +4,9 @@
 
 .yoga-bar-chart-col {
 	display: block;
+	overflow-x: scroll;
 	text-align: center;
+	white-space: nowrap;
 }
 
 .ybc-bar {
@@ -30,6 +32,50 @@
 
 .ybc-bar-bg-4 {
 	background-color: #7209b7;
+}
+
+.ybc-bar-bg-5 {
+	background-color: #1a53ff;
+}
+
+.ybc-bar-bg-6 {
+	background-color: #87bc45;
+}
+
+.ybc-bar-bg-7 {
+	background-color: #b30000;
+}
+
+.ybc-bar-bg-8 {
+	background-color: #e5ddc8;
+}
+
+.ybc-bar-bg-9 {
+	background-color: #c197d2;
+}
+
+.ybc-bar-bg-10 {
+	background-color: #fad02c;
+}
+
+.ybc-bar-bg-11 {
+	background-color: #90adc6;
+}
+
+.ybc-bar-bg-12 {
+	background-color: #000;
+}
+
+.ybc-bar-bg-13 {
+	background-color: #000;
+}
+
+.ybc-bar-bg-14 {
+	background-color: #000;
+}
+
+.ybc-bar-bg-15 {
+	background-color: #000;
 }
 
 .ybc-col {
