@@ -11,7 +11,7 @@ const chartData = [
 	{ label: '#4', tailLabel: '(12.7%)', value: 12.7 },
 	{ label: '#5', tailLabel: '(100.0%)', value: 100 },
 	{ label: '#6', tailLabel: '(10.0%)', value: 10.0 },
-	{ label: '#5', tailLabel: '(50.0%)', value: 50.0 },
+	{ label: '#7', tailLabel: '(50.0%)', value: 50.0 },
 	{ label: '#8', tailLabel: '(20.0%)', value: 20.0 },
 	{ label: '#9', tailLabel: '(60.0%)', value: 60.0 },
 	{ label: '#10', tailLabel: '(30.0%)', value: 30.0 },
