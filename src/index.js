@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About';
 import App from './App';
 import Dynamic from './pages/Dynamic';
-import Flex from './pages/Flex';
+import Yoga from './pages/Yoga';
 import Error from './Error';
 import Home from './pages/Home';
 import Test from './pages/Test';
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 			{ path: '/', element: <Home /> },
 			{ path: '/About', element: <About /> },
 			{ path: '/Dynamic', element: <Dynamic /> },
-			{ path: '/Flex', element: <Flex /> },
+			{ path: '/Yoga', element: <Yoga /> },
 			{ path: '/Home', element: <Home /> },
 			{ path: '/Test', element: <Test /> },
 		],
