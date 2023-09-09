@@ -83,6 +83,10 @@
 	min-width: 4em;
 }
 
+.ybc-col-ttb {
+	vertical-align: top;
+}
+
 .ybc-default-tail {
 	flex: 0 0 4.25em;
 }

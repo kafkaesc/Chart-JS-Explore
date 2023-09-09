@@ -66,6 +66,28 @@ export default function YogaBarChart({ chartData, ...props }) {
 				})}
 			</div>
 		);
+	} else if (props.direction === 'down') {
+		const barMaxHeight = props.barHeight ? +props.barHeight : 200;
+		ybcJsx = (
+			<div className="yoga-bar-chart-col">
+				{chartData.map((datum, index) => {
+					const height = Math.floor((datum.value / 100) * barMaxHeight) + 'px';
+					return (
+						<div
+							className="ybc-col ybc-col-ttb"
+							key={`${cid}-ybc-col-${datum.label}`}
+						>
+							<div>{datum.label}</div>
+							<div
+								className={`ybc-bar ybc-bar-bg-${index}`}
+								style={{ height: height }}
+							></div>
+							{datum.tailLabel && <div>{datum.tailLabel}</div>}
+						</div>
+					);
+				})}
+			</div>
+		);
 	}
 	return ybcJsx;
 }

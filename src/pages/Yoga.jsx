@@ -23,7 +23,7 @@ export default function Yoga() {
 	return (
 		<>
 			<Navigation />
-			<H1 className="mb-2">Flex Graph</H1>
+			<H1 className="mb-2">Yoga (Bar) Graph</H1>
 			<div className="max-w-2xl mx-auto">
 				<div className="py-2 mb-4 border">
 					<H2>Default / Rightward</H2>
@@ -35,7 +35,11 @@ export default function Yoga() {
 				</div>
 				<div className="py-2 mb-4 border">
 					<H2>Upward</H2>
-					<YogaBarChart barHeight="250" chartData={chartData} direction="up" />
+					<YogaBarChart barHeight="300" chartData={chartData} direction="up" />
+				</div>
+				<div className="py-2 mb-4 border">
+					<H2>Downward</H2>
+					<YogaBarChart chartData={chartData} direction="down" />
 				</div>
 			</div>
 		</>
