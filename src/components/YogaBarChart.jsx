@@ -1,7 +1,7 @@
 import './YogaBarChart.css';
 
 // TODO: Set tickWidth based on longest label
-const tickWidth = 25;
+const tickWidth = '2em';
 
 export default function YogaBarChart({ chartData, ...props }) {
 	const cid = props.chartId
@@ -14,9 +14,7 @@ export default function YogaBarChart({ chartData, ...props }) {
 				{chartData.map((datum, index) => {
 					return (
 						<div className="ybc-row" key={`${cid}-ybc-row-${datum.label}`}>
-							<div style={{ flex: '0 0 ' + tickWidth + 'px' }}>
-								{datum.label}
-							</div>
+							<div style={{ flex: '0 0 ' + tickWidth }}>{datum.label}</div>
 							<div
 								className={`ybc-bar ybc-bar-bg-${index}`}
 								style={{ width: datum.value + '%' }}
@@ -36,9 +34,7 @@ export default function YogaBarChart({ chartData, ...props }) {
 							className="ybc-row ybc-row-rtl"
 							key={`${cid}-ybc-row-${datum.label}`}
 						>
-							<div style={{ flex: '0 0 ' + tickWidth + 'px' }}>
-								{datum.label}
-							</div>
+							<div style={{ flex: '0 0 ' + tickWidth }}>{datum.label}</div>
 							<div
 								className={`ybc-bar ybc-bar-bg-${index}`}
 								style={{ width: datum.value + '%' }}
@@ -52,15 +48,17 @@ export default function YogaBarChart({ chartData, ...props }) {
 			</div>
 		);
 	} else if (props.direction === 'up') {
+		const barMaxHeight = props.barHeight ? +props.barHeight : 200;
 		ybcJsx = (
 			<div className="yoga-bar-chart-col">
 				{chartData.map((datum, index) => {
+					const height = Math.floor((datum.value / 100) * barMaxHeight) + 'px';
 					return (
 						<div className="ybc-col" key={`${cid}-ybc-col-${datum.label}`}>
 							{datum.tailLabel && <div>{datum.tailLabel}</div>}
 							<div
 								className={`ybc-bar ybc-bar-bg-${index}`}
-								style={{ height: (datum.value / 100) * 50 + 'px' }}
+								style={{ height: height }}
 							></div>
 							<div>{datum.label}</div>
 						</div>
