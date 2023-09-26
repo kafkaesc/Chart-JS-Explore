@@ -2,7 +2,6 @@ import H1 from '../elements/H1';
 import H2 from '../elements/H2';
 import Navigation from '../components/Navigation';
 import YogaBarChart from '../components/YogaBarChart';
-import './Yoga.css';
 
 const chartData = [
 	{ label: '#1', tailLabel: '(46.3%)', value: 46.3 },
