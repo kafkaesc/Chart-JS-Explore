@@ -6,10 +6,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About';
 import App from './App';
 import Dynamic from './pages/Dynamic';
-import Yoga from './pages/Yoga';
 import Error from './Error';
 import Home from './pages/Home';
+import LiveYoga from './pages/LiveYoga';
 import Test from './pages/Test';
+import Yoga from './pages/Yoga';
 
 import './index.css';
 
@@ -23,9 +24,10 @@ const router = createBrowserRouter([
 			{ path: '/', element: <Home /> },
 			{ path: '/About', element: <About /> },
 			{ path: '/Dynamic', element: <Dynamic /> },
-			{ path: '/Yoga', element: <Yoga /> },
 			{ path: '/Home', element: <Home /> },
+			{ path: '/LiveYoga', element: <LiveYoga /> },
 			{ path: '/Test', element: <Test /> },
+			{ path: '/Yoga', element: <Yoga /> },
 		],
 	},
 ]);

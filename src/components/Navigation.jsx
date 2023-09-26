@@ -5,6 +5,7 @@ const pages = [
 	{ path: '/About', text: 'About' },
 	{ path: '/Dynamic', text: 'Dynamic' },
 	{ path: '/Yoga', text: 'Yoga' },
+	{ path: '/LiveYoga', text: 'Live' },
 	{ path: '/Test', text: 'Test' },
 ];
 
