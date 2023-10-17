@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import LiveYoga from './pages/LiveYoga';
 import Test from './pages/Test';
 import Yoga from './pages/Yoga';
+import Store from './pages/Store';
 
 import './index.css';
 
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
 			{ path: '/LiveYoga', element: <LiveYoga /> },
 			{ path: '/Test', element: <Test /> },
 			{ path: '/Yoga', element: <Yoga /> },
+			{ path: '/Store', element: <Store /> },
 		],
 	},
 ]);
