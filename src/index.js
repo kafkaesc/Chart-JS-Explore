@@ -8,6 +8,7 @@ import App from './App';
 import Dynamic from './pages/Dynamic';
 import Error from './Error';
 import Home from './pages/Home';
+import Live from './pages/Live';
 import LiveYoga from './pages/LiveYoga';
 import Test from './pages/Test';
 import Yoga from './pages/Yoga';
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
 			{ path: '/About', element: <About /> },
 			{ path: '/Dynamic', element: <Dynamic /> },
 			{ path: '/Home', element: <Home /> },
+			{ path: '/Live', element: <Live /> },
 			{ path: '/LiveYoga', element: <LiveYoga /> },
 			{ path: '/Test', element: <Test /> },
 			{ path: '/Yoga', element: <Yoga /> },

@@ -4,8 +4,9 @@ const pages = [
 	{ path: '/Home', text: 'Home' },
 	{ path: '/About', text: 'About' },
 	{ path: '/Dynamic', text: 'Dynamic' },
+	{ path: '/Live', text: 'Live' },
 	{ path: '/Yoga', text: 'Yoga' },
-	{ path: '/LiveYoga', text: 'Live' },
+	{ path: '/LiveYoga', text: 'Live Yoga' },
 	{ path: '/Test', text: 'Test' },
 ];
 
