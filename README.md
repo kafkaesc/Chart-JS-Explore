@@ -2,7 +2,9 @@
 
 Built by Jared Hettinger
 
-A simple project for exploring [Chart.js](https://www.chartjs.org).
+A simple project for exploring [Chart.js](https://www.chartjs.org) and building
+some chart components of my own. This project is meant moreso more for exploring
+libraries and implementations of data than any sort of concept to launch.
 
 ## Initial Run
 
