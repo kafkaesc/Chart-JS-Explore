@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import Button from '../elements/Button';
 import H1 from '../elements/H1';
 import LiveLineChart from '../components/LiveLineChart';
 import Navigation from '../components/Navigation';
@@ -7,6 +8,7 @@ import Navigation from '../components/Navigation';
 import { evens } from '../utils/Data';
 
 export default function Live() {
+	const [activeChart, setActiveChart] = useState('line');
 	const [chartData, setChartData] = useState({
 		labels: evens.map((item, index) => index + 1),
 		datasets: [
@@ -45,7 +47,17 @@ export default function Live() {
 		<>
 			<Navigation />
 			<H1>Live ChartJS</H1>
-			<LiveLineChart chartData={chartData} h2Title={'Live Feed Line Chart'} />
+			{activeChart === 'line' ? (
+				<LiveLineChart chartData={chartData} h2Title={'Live Feed Line Chart'} />
+			) : activeChart === 'bar' ? (
+				<div className="text-center">TODO: Live Bar Chart Component</div>
+			) : (
+				<></>
+			)}
+			<div className="text-center">
+				<Button onClick={() => setActiveChart('bar')}>Bar</Button>
+				<Button onClick={() => setActiveChart('line')}>Line</Button>
+			</div>
 		</>
 	);
 }
